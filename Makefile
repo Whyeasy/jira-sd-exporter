@@ -1,5 +1,5 @@
 build:
-	go build -o bin/jira-exporter ./cmd/jira-exporter
+	go build -o bin/jira-sd-exporter ./cmd/jira-sd-exporter
 
 deps:
 	go mod verify
