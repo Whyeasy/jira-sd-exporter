@@ -53,7 +53,7 @@ func main() {
 		_, err := w.Write([]byte(`<html>
 			<head><title>Jira SD Exporter</title></head>
 			<body>
-			<h1>Jira Exporter</h1>
+			<h1>Jira SD Exporter</h1>
 			<p><a href="` + config.ListenPath + `">Metrics</a></p>
 			</body>
 			</html>`))
