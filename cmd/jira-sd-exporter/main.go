@@ -30,7 +30,7 @@ func init() {
 	flag.StringVar(&config.JiraKeyInclude, "jiraKeyInclude", os.Getenv("JIRA_KEY_INCL"), "Comma seperated string with Project Keys to include in queries.")
 	flag.StringVar(&config.TeamCustomField, "jiraTeamCustomField", os.Getenv("JIRA_TEAM_CUSTOM_FIELD"), "Custom Team Field when used within Jira Service Desk.")
 	flag.StringVar(&config.SLACustomFields, "jiraSLACustomFields", os.Getenv("JIRA_SLA_CUSTOM_FIELD"), "Comma seperated string with Custom Fields of SLA's you want to monitor.")
-	flag.StringVar(&config.Interval, "interval", os.Getenv("JIRA_INTERVAL"), "Provide a interval on what rate the Jira Service Desk API should be scraped.")
+	flag.StringVar(&config.Interval, "interval", os.Getenv("INTERVAL"), "Provide a interval on what rate the Jira Service Desk API should be scraped.")
 }
 
 func main() {
