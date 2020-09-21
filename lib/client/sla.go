@@ -22,9 +22,9 @@ func getSLAs(c *ExporterClient) (*[]SLAStats, error) {
 
 	switch {
 	case c.jiraKeyExclude != "":
-		jql = fmt.Sprintf("issuetype = 'IT Help' AND resolutiondate != null AND project NOT IN (%s)", c.jiraKeyExclude)
+		jql = fmt.Sprintf("issuetype = 'IT Help' AND project NOT IN (%s)", c.jiraKeyExclude)
 	case c.jiraKeyInclude != "":
-		jql = fmt.Sprintf("issuetype = 'IT Help' AND resolutiondate != null AND project IN (%s)", c.jiraKeyInclude)
+		jql = fmt.Sprintf("issuetype = 'IT Help' AND project IN (%s)", c.jiraKeyInclude)
 	default:
 		jql = fmt.Sprintf("issuetype = 'IT Help'")
 	}
