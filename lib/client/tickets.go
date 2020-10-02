@@ -23,7 +23,7 @@ func getTickets(c *ExporterClient) (*[]TicketStats, error) {
 	case c.jiraKeyInclude != "":
 		jql = fmt.Sprintf("issuetype = 'IT Help' AND project IN (%s)", c.jiraKeyInclude)
 	default:
-		jql = fmt.Sprintf("issuetype = 'IT Help'")
+		jql = "issuetype = 'IT Help'"
 	}
 
 	var expression string
